@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="roboarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robotic Arm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQg-xq-NFq">
+                                <rect key="frame" x="0.0" y="79" width="414" height="48"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEL-qp-tkT">
+                                <rect key="frame" x="57" y="165" width="300" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Ble devices"/>
+                                <connections>
+                                    <action selector="bleList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOj-Nw-Fsw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voU-Db-Pub">
+                                <rect key="frame" x="57" y="192" width="295" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2pj-dM-ifF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <color key="highlightedColor" name="AccentColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ljR-89-qit">
+                                <rect key="frame" x="53" y="260" width="316" height="462"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arm Rotations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-ge-Vtz">
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" name="AccentColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E E angle (A): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yw-tk-FtA">
+                                        <rect key="frame" x="0.0" y="36" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-lj-kxm">
+                                        <rect key="frame" x="-2" y="72" width="320" height="31"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.55000000000000004" height="1"/>
+                                        <connections>
+                                            <action selector="sliderOnee:" destination="BYZ-38-t0r" eventType="valueChanged" id="UXw-HN-Y56"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrist angle (B): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d55-XK-d7b">
+                                        <rect key="frame" x="0.0" y="108" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-sv-VLl">
+                                        <rect key="frame" x="-2" y="144" width="320" height="31"/>
+                                        <connections>
+                                            <action selector="sliderTwo:" destination="BYZ-38-t0r" eventType="valueChanged" id="iYQ-R0-ao9"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elbow angle (C): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-mN-ufQ">
+                                        <rect key="frame" x="0.0" y="180" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="LUy-iv-un4">
+                                        <rect key="frame" x="-2" y="216" width="320" height="31"/>
+                                        <connections>
+                                            <action selector="sliderThree:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uo3-S2-nt4"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulder angle (D): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOJ-F3-BIM">
+                                        <rect key="frame" x="0.0" y="252" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="ner-e3-lUZ">
+                                        <rect key="frame" x="-2" y="288" width="320" height="31"/>
+                                        <connections>
+                                            <action selector="sliderFour:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ub4-UE-Iqx"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waist angle (E)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOG-g8-wtT">
+                                        <rect key="frame" x="0.0" y="324" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="9fB-5s-LGk">
+                                        <rect key="frame" x="-2" y="360" width="320" height="31"/>
+                                        <connections>
+                                            <action selector="sliderFive:" destination="BYZ-38-t0r" eventType="valueChanged" id="ci0-wc-mfs"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base angle (F): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mH-5B-NHu">
+                                        <rect key="frame" x="0.0" y="396" width="316" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="4v2-ve-cIa">
+                                        <rect key="frame" x="-2" y="432" width="320" height="31"/>
+                                        <connections>
+                                            <action selector="sliderSix:" destination="BYZ-38-t0r" eventType="valueChanged" id="YqU-td-2Q0"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-Oh-FNQ">
+                                <rect key="frame" x="52" y="786" width="304" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Disconnect"/>
+                                <connections>
+                                    <action selector="disconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCh-yt-Xpi"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="czb-wq-VS7">
+                                <rect key="frame" x="20" y="143" width="374" height="689"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Yvn-9J-x8M">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yvn-9J-x8M" id="Gfa-Om-btt">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ljR-89-qit" firstAttribute="top" secondItem="voU-Db-Pub" secondAttribute="bottom" constant="8" id="2af-x1-JBs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L1G-Oh-FNQ" secondAttribute="trailing" constant="156" id="2oc-jb-XUF"/>
+                            <constraint firstItem="gEL-qp-tkT" firstAttribute="top" secondItem="mQg-xq-NFq" secondAttribute="bottom" constant="38" id="3CN-3g-CBV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="voU-Db-Pub" secondAttribute="trailing" constant="62" id="63N-rk-jt3"/>
+                            <constraint firstItem="ljR-89-qit" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="6a0-lt-U8g"/>
+                            <constraint firstItem="mQg-xq-NFq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ZQ-MG-Oli"/>
+                            <constraint firstItem="voU-Db-Pub" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="A9S-84-QpI"/>
+                            <constraint firstItem="mQg-xq-NFq" firstAttribute="centerX" secondItem="gEL-qp-tkT" secondAttribute="centerX" id="D0d-La-eSE"/>
+                            <constraint firstItem="voU-Db-Pub" firstAttribute="top" secondItem="mQg-xq-NFq" secondAttribute="bottom" constant="65" id="Mnk-zI-EMt"/>
+                            <constraint firstItem="voU-Db-Pub" firstAttribute="leading" secondItem="gEL-qp-tkT" secondAttribute="leading" id="NHd-gO-esg"/>
+                            <constraint firstItem="L1G-Oh-FNQ" firstAttribute="top" secondItem="ljR-89-qit" secondAttribute="bottom" constant="49" id="Ofi-P5-7cW"/>
+                            <constraint firstAttribute="trailing" secondItem="mQg-xq-NFq" secondAttribute="trailing" id="Ok5-0l-BtP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L1G-Oh-FNQ" secondAttribute="bottom" constant="60" id="ViB-0N-UE1"/>
+                            <constraint firstItem="mQg-xq-NFq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="eee-vm-s36"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ljR-89-qit" secondAttribute="trailing" constant="45" id="rXJ-nR-kjO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="angleFive" destination="gOG-g8-wtT" id="Gcw-HA-1iq"/>
+                        <outlet property="angleFour" destination="IOJ-F3-BIM" id="ovc-ot-yJN"/>
+                        <outlet property="angleOne" destination="9yw-tk-FtA" id="B5R-bv-RdY"/>
+                        <outlet property="angleSix" destination="5mH-5B-NHu" id="IOC-Vb-0of"/>
+                        <outlet property="angleThree" destination="6lK-mN-ufQ" id="0jL-Py-VDX"/>
+                        <outlet property="angleTwo" destination="d55-XK-d7b" id="2eo-oG-Si2"/>
+                        <outlet property="bleTable" destination="czb-wq-VS7" id="7Nu-y9-543"/>
+                        <outlet property="connectionLabel" destination="voU-Db-Pub" id="zsZ-dS-pBV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
