@@ -33,37 +33,37 @@ class ViewController: UIViewController, CBPeripheralDelegate{
     @IBAction func sliderOnee(_ sender: UISlider) {
         sender.isContinuous = false
         angleOne.text =  "E E angle (A): " + String(Int(sender.value))
-        writeToBLE(withCharacteristic: angleChar, withValue: angleOne.text!.data(using: .utf8)!)
+        writeToBLE(withCharacteristic: angleChar, withValue: String("A" + String(Int(sender.value))).data(using: .utf8)!)
     }
     
     @IBAction func sliderTwo(_ sender: UISlider) {
         sender.isContinuous = false
         angleTwo.text = "Wrist angle (B): " + String(Int(sender.value))
-        writeToBLE(withCharacteristic: angleChar, withValue: angleTwo.text!.data(using: .utf8)!)
+        writeToBLE(withCharacteristic: angleChar, withValue: String("B" + String(Int(sender.value))).data(using: .utf8)!)
     }
     
     @IBAction func sliderThree(_ sender: UISlider) {
         sender.isContinuous = false
         angleThree.text = "Elbow angle (C): " + String(Int(sender.value))
-        writeToBLE(withCharacteristic: angleChar, withValue: angleThree.text!.data(using: .utf8)!)
+        writeToBLE(withCharacteristic: angleChar, withValue: String("C" + String(Int(sender.value))).data(using: .utf8)!)
     }
     
     @IBAction func sliderFour(_ sender: UISlider) {
         sender.isContinuous = false
         angleFour.text = "Shoulder angle (D): " + String(Int(sender.value))
-        writeToBLE(withCharacteristic: angleChar, withValue: angleFour.text!.data(using: .utf8)!)
+        writeToBLE(withCharacteristic: angleChar, withValue: String("D" + String(Int(sender.value))).data(using: .utf8)!)
     }
     
     @IBAction func sliderFive(_ sender: UISlider) {
         sender.isContinuous = false
         angleFive.text = "Waist angle (E): " + String(Int(sender.value))
-        writeToBLE(withCharacteristic: angleChar, withValue: angleFive.text!.data(using: .utf8)!)
+        writeToBLE(withCharacteristic: angleChar, withValue: String("E" + String(Int(sender.value))).data(using: .utf8)!)
     }
     
     @IBAction func sliderSix(_ sender: UISlider) {
         sender.isContinuous = false
-        angleSix.text = "Base angle (F): " + String(Int(sender.value))
-        writeToBLE(withCharacteristic: angleChar, withValue: angleSix.text!.data(using: .utf8)!)
+        angleSix.text = "Speed of motors (F): " + String(Int(sender.value))
+        writeToBLE(withCharacteristic: angleChar, withValue: String("F" + String(Int(sender.value))).data(using: .utf8)!)
     }
     
     @IBAction func bleList(_ sender: Any) {
@@ -71,7 +71,7 @@ class ViewController: UIViewController, CBPeripheralDelegate{
         //UI Table instances
         bleTable.dataSource = self
         bleTable.delegate = self
-       
+    
     }
     
     @IBAction func disconnect(_ sender: Any) {
