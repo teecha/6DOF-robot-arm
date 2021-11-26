@@ -29,7 +29,14 @@ class ViewController: UIViewController, CBPeripheralDelegate{
     @IBOutlet weak var angleFive: UILabel!
     @IBOutlet weak var angleSix: UILabel!
     @IBOutlet weak var bleTable: UITableView!
+    @IBOutlet weak var angleSeven: UILabel!
     
+    
+    @IBAction func clawRotation(_ sender: UISlider) {
+        sender.isContinuous = false
+        angleSeven.text =  "Claw Rotation (F): " + String(Int(sender.value))
+        writeToBLE(withCharacteristic: angleChar, withValue: String("F" + String(Int(sender.value)) + "\n").data(using: .utf8)!)
+    }
     @IBAction func sliderOnee(_ sender: UISlider) {
         sender.isContinuous = false
         angleOne.text =  "E E angle (A): " + String(Int(sender.value))
@@ -62,8 +69,8 @@ class ViewController: UIViewController, CBPeripheralDelegate{
     
     @IBAction func sliderSix(_ sender: UISlider) {
         sender.isContinuous = false
-        angleSix.text = "Speed of motors (F): " + String(Int(sender.value))
-        writeToBLE(withCharacteristic: angleChar, withValue: String("F" + String(Int(sender.value)) + "\n").data(using: .utf8)!)
+        angleSix.text = "Speed of motors (G): " + String(Int(sender.value))
+        writeToBLE(withCharacteristic: angleChar, withValue: String("G" + String(Int(sender.value)) + "\n").data(using: .utf8)!)
     }
     
     @IBAction func bleList(_ sender: Any) {

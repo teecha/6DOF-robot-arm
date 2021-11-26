@@ -44,82 +44,94 @@
                                 <rect key="frame" x="53" y="260" width="316" height="462"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arm Rotations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-ge-Vtz">
-                                        <rect key="frame" x="0.0" y="0.0" width="316" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" name="AccentColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E E angle (A): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yw-tk-FtA">
-                                        <rect key="frame" x="0.0" y="36" width="316" height="30"/>
+                                        <rect key="frame" x="0.0" y="31" width="316" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-lj-kxm">
-                                        <rect key="frame" x="-2" y="72" width="320" height="31"/>
+                                        <rect key="frame" x="-2" y="62.5" width="320" height="26"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.55000000000000004" height="1"/>
                                         <connections>
                                             <action selector="sliderOnee:" destination="BYZ-38-t0r" eventType="valueChanged" id="UXw-HN-Y56"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrist angle (B): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d55-XK-d7b">
-                                        <rect key="frame" x="0.0" y="108" width="316" height="30"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="316" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-sv-VLl">
-                                        <rect key="frame" x="-2" y="144" width="320" height="31"/>
+                                        <rect key="frame" x="-2" y="125" width="320" height="26"/>
                                         <connections>
                                             <action selector="sliderTwo:" destination="BYZ-38-t0r" eventType="valueChanged" id="iYQ-R0-ao9"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elbow angle (C): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-mN-ufQ">
-                                        <rect key="frame" x="0.0" y="180" width="316" height="30"/>
+                                        <rect key="frame" x="0.0" y="156" width="316" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="LUy-iv-un4">
-                                        <rect key="frame" x="-2" y="216" width="320" height="31"/>
+                                        <rect key="frame" x="-2" y="187" width="320" height="26.5"/>
                                         <connections>
                                             <action selector="sliderThree:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uo3-S2-nt4"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoulder angle (D): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOJ-F3-BIM">
-                                        <rect key="frame" x="0.0" y="252" width="316" height="30"/>
+                                        <rect key="frame" x="0.0" y="218.5" width="316" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="ner-e3-lUZ">
-                                        <rect key="frame" x="-2" y="288" width="320" height="31"/>
+                                        <rect key="frame" x="-2" y="249.5" width="320" height="26.5"/>
                                         <connections>
                                             <action selector="sliderFour:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ub4-UE-Iqx"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waist angle (E)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOG-g8-wtT">
-                                        <rect key="frame" x="0.0" y="324" width="316" height="30"/>
+                                        <rect key="frame" x="0.0" y="281" width="316" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="9fB-5s-LGk">
-                                        <rect key="frame" x="-2" y="360" width="320" height="31"/>
+                                        <rect key="frame" x="-2" y="312" width="320" height="26"/>
                                         <connections>
                                             <action selector="sliderFive:" destination="BYZ-38-t0r" eventType="valueChanged" id="ci0-wc-mfs"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed of motors (F): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mH-5B-NHu">
-                                        <rect key="frame" x="0.0" y="396" width="316" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Claw Rotation (F): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mH-5B-NHu">
+                                        <rect key="frame" x="0.0" y="343" width="316" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="4v2-ve-cIa">
-                                        <rect key="frame" x="-2" y="432" width="320" height="31"/>
+                                        <rect key="frame" x="-2" y="374.5" width="320" height="26"/>
                                         <connections>
-                                            <action selector="sliderSix:" destination="BYZ-38-t0r" eventType="valueChanged" id="YqU-td-2Q0"/>
+                                            <action selector="clawRotation:" destination="BYZ-38-t0r" eventType="valueChanged" id="iAk-iQ-FFr"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed of motors (G): " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ8-6b-6k0">
+                                        <rect key="frame" x="0.0" y="405.5" width="316" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="4kN-gr-1z5">
+                                        <rect key="frame" x="-2" y="437" width="320" height="26"/>
+                                        <connections>
+                                            <action selector="sliderSix:" destination="BYZ-38-t0r" eventType="valueChanged" id="hop-lh-YXI"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -172,7 +184,8 @@
                         <outlet property="angleFive" destination="gOG-g8-wtT" id="Gcw-HA-1iq"/>
                         <outlet property="angleFour" destination="IOJ-F3-BIM" id="ovc-ot-yJN"/>
                         <outlet property="angleOne" destination="9yw-tk-FtA" id="B5R-bv-RdY"/>
-                        <outlet property="angleSix" destination="5mH-5B-NHu" id="IOC-Vb-0of"/>
+                        <outlet property="angleSeven" destination="5mH-5B-NHu" id="qQz-j5-I4G"/>
+                        <outlet property="angleSix" destination="HQ8-6b-6k0" id="W2U-Uy-3V9"/>
                         <outlet property="angleThree" destination="6lK-mN-ufQ" id="0jL-Py-VDX"/>
                         <outlet property="angleTwo" destination="d55-XK-d7b" id="2eo-oG-Si2"/>
                         <outlet property="bleTable" destination="czb-wq-VS7" id="7Nu-y9-543"/>
