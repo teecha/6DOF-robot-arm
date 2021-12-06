@@ -136,12 +136,20 @@
                                     </slider>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-Oh-FNQ">
-                                <rect key="frame" x="52" y="786" width="304" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1G-Oh-FNQ">
+                                <rect key="frame" x="161" y="771" width="97" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Disconnect"/>
                                 <connections>
                                     <action selector="disconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCh-yt-Xpi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcP-oN-MXt">
+                                <rect key="frame" x="125" y="732" width="155" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Trajectory"/>
+                                <connections>
+                                    <action selector="trajectory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pb5-d4-p0Y"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="czb-wq-VS7">
@@ -175,7 +183,11 @@
                             <constraint firstItem="voU-Db-Pub" firstAttribute="leading" secondItem="gEL-qp-tkT" secondAttribute="leading" id="NHd-gO-esg"/>
                             <constraint firstItem="L1G-Oh-FNQ" firstAttribute="top" secondItem="ljR-89-qit" secondAttribute="bottom" constant="49" id="Ofi-P5-7cW"/>
                             <constraint firstAttribute="trailing" secondItem="mQg-xq-NFq" secondAttribute="trailing" id="Ok5-0l-BtP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IcP-oN-MXt" secondAttribute="trailing" constant="134" id="SnW-wp-HPK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L1G-Oh-FNQ" secondAttribute="bottom" constant="60" id="ViB-0N-UE1"/>
+                            <constraint firstItem="IcP-oN-MXt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="a56-LW-4X5"/>
+                            <constraint firstItem="L1G-Oh-FNQ" firstAttribute="top" secondItem="IcP-oN-MXt" secondAttribute="bottom" constant="8" symbolic="YES" id="a9K-Xw-4cU"/>
+                            <constraint firstItem="L1G-Oh-FNQ" firstAttribute="top" secondItem="IcP-oN-MXt" secondAttribute="bottom" constant="8" id="byI-zI-mdy"/>
                             <constraint firstItem="mQg-xq-NFq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="eee-vm-s36"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ljR-89-qit" secondAttribute="trailing" constant="45" id="rXJ-nR-kjO"/>
                         </constraints>

@@ -31,6 +31,9 @@ class ViewController: UIViewController, CBPeripheralDelegate{
     @IBOutlet weak var bleTable: UITableView!
     @IBOutlet weak var angleSeven: UILabel!
     
+    @IBAction func trajectory(_ sender: Any) {
+        writeToBLE(withCharacteristic: angleChar, withValue: String("H\n").data(using: .utf8)!)
+    }
     
     @IBAction func clawRotation(_ sender: UISlider) {
         sender.isContinuous = false
